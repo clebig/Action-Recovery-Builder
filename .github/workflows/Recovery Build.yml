@@ -14,7 +14,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/tnakamur/android_device_google_sunfish'
+        default: 'https://github.com/clebig/android_device_google_sunfish'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
@@ -114,8 +114,8 @@ jobs:
         mkdir -p ~/workspace
         cd ~/workspace
         echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
-        git config --global user.name "tnakamur"
-        git config --global user.email "taka.nakamura1009@gmail.com"
+        git config --global user.name "clebig"
+        git config --global user.email "clebig@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
       id: pwd
 
